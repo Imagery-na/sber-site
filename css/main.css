@@ -10,6 +10,7 @@
                          "a m"
                          "f f";
     grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 200px 1fr;
     min-height: 100vh;
 }
 
@@ -30,7 +31,11 @@ aside {
     background-color: #5a6794;
     grid-row: 2;
     grid-area: a;
-    padding-left: 20px;
+
+    display: flex;
+
+    font-size: 32px;
+    padding-left: 2%;
 }
 
 main {
