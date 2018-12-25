@@ -7,33 +7,42 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-<div class="grid">
-    <header>
-        <div class="block_1">Что-то_1</div>
-        <div class="block_2">Кажись поиск</div>
-    </header>
 
-
-    <aside>
-        <ul>
-            <li><a href="#">Ученики</a></li>
-            <li><a href="#">Пользователи</a></li>
-            <li><a href="#">Группы</a></li>
-            <li><a href="#">Курсы</a></li>
-            <li><a href="#">Расписание</a></li>
-            <li><a href="#">Главная?</a></li>
-        </ul>
-    </aside>
-
-
-    <main>
-        <span>Здесь будет таблица или типа того</span>
-    </main>
-
-
-    <footer>
-        <span>Что здесь будет?</span>
-    </footer>
+</body>
+<header>
+<!--Здесь верхняя рабочая панель -->
+</header>
+<div class="container">
+     <div class="menu">
+<!--меню, которое будет сворачиваться по щелчку -->
+<a href="#main">Главная</a> <br>
+<a class="active" href="#students">Ученики</a> <br>
+<a href="#users">Пользователи</a> <br>
+<a href="#">Группы</a> <br>
+<a href="#">Курсы</a> <br>
+<a href="#">Расписания</a>
+     </div>
+     <div class="main">
+<!--Таблица с учениками-->
+<table>
+<caption>Ученики</caption>
+<tr>  <th>ID</th>   <th>Фамилия</th>  <th>Имя</th>  <th>Отчество</th>  <th>Дата<br>рождения</th>  <th>Телефон</th>  <th>Адрес <br> проживания</th> <th>Группа</th> <th>Логин</th> <th>Действия</th> </tr>
+<tr>  <th>1</th>    <th>Синичкин</th> <th>Юрий</th> <th>Борисович</th> <th>12.03.2002</th>    <th>89833454828</th>  <th>Хабаровск...</th>     <th>№1 </th>    <th>Yuriy</th> <th><input type="button" name="button1" value="Изменить"> &nbsp; <input type="reset" name="reset1" value="Удалить"> </th>
+</table>
+<div class="sortirovka">
+<select name="time" size="1">
+<option selected value="0">Все ученики
+<option value="1">Группа 1
+<option value="2">Группа 2
+<option value="3">Группа 3
+<option value="4">Группа 4
+</select>
 </div>
+     </div>
+</div>
+<footer>
+</footer>
+
+
 </body>
 </html>
