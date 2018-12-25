@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: "h h"
+                         "a m"
+                         "f f";
+    grid-template-rows: 100px 1fr 100px;
+    min-height: 100vh;
+}
+
+/* Цвета для большей наглядности */
+
+header {
+    background-color: #F97733;
+    grid-row: 1;
+    grid-area: h;
+
+    /* Здесь можно и гриды использовать, но хорошим тоном считается в таком случае флексы (интерсно, почему) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    background-color: #5a6794;
+    grid-row: 2;
+    grid-area: a;
+}
+
+main {
+    background-color: blueviolet;
+    grid-row: 2;
+    grid-area: m;
+}
+
+footer {
+    background-color: aqua;
+    grid-row: 3;
+    grid-area: f;
+}
+
+aside > ul > li {
+    text-decoration: none;
+}
