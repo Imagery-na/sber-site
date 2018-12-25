@@ -4,74 +4,82 @@
     box-sizing: border-box;
 }
 
-.grid {
-    display: grid;
-    grid-template-areas: "h h"
-                         "a m"
-                         "f f";
-    grid-template-rows: 100px 1fr 100px;
-    grid-template-columns: 200px 1fr;
-    min-height: 100vh;
-}
+/*.grid {*/
+    /*display: grid;*/
+    /*grid-template-areas: "h h"*/
+                         /*"a m"*/
+                         /*"f f";*/
+    /*grid-template-rows: 100px 1fr 100px;*/
+    /*grid-template-columns: 200px 1fr;*/
+    /*min-height: 100vh;*/
+/*}*/
 
 .container {
     display: flex;
-    position:absolute;
+    position:absolute;  /* Почему абсолютная? */
     top:10%; /*высота рабочей панели */
     left: 0;
     width: 100%;
-    min-height: 90%;
-    flex-direction: row;
+    min-height: 90%;        /* Должно быть 100% (ты написала 90, ибо 10: ушло в header. Добавь header в контейнер с флексами) */
+    flex-direction: row;    /* row стандартно идёт, писать не обязательно */
     background-color: red;
 }
-header{
-  position:absolute;
+
+header {
+  position:absolute;    /* Почему абсолютное? */
   top:0;
   left:0;
   width:100%;
   height: 10%;
-  display: inline-flex;
+  display: inline-flex; /* зачем? */
   justify-content:space-between;
   background-color:#62016D;
   padding: 1%;
 }
-.rows{
-  background-color: darkblue;
-  display: flex;
-  flex-direction: row;
-  height: 90%;
+
+.rows {
+    background-color: darkblue;
+    display: flex;
+    flex-direction: row;    /* Флексы стандартно  row */
+    height: 90%;
 }
-.menu{
- background:#9702A7;
- border-right: 4px solid #62016D;
+
+.menu {
+    background:#9702A7;
+    border-right: 4px solid #62016D;
 }
-.main{
- flex-grow: 1;
- display: flex;
- background:#D37BF4;
- text-align: center;
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    background:#D37BF4;
+    text-align: center; /* Почему используется text-align, а не тот же justify-content, align-items */
 }
-.menu a{
- font-size: 30px;
- margin: 10px;
- color:white;
- text-decoration:none;
+
+.menu a {
+    font-size: 30px;
+    margin: 10px;
+    color:white;
+    text-decoration:none;
 }
-.menu a:hover{
- color: violet;
- text-decoration:underline;
+
+.menu a:hover {
+    color: violet;
+    text-decoration:underline;
 }
-table{
-   border-collapse: collapse;
-   background-color:#D37BF4;
-   margin: 20px;
- }
- th, td {border: 2px solid  #62016D;}
- tr:hover{
-   background-color:#9702A7;
- }
- .sortirovka{
-margin:auto;
-height: 200px;
-margin-top: 50px;
+
+table {
+    border-collapse: collapse;
+    background-color:#D37BF4;
+    margin: 20px;
+}
+
+th, td {border: 2px solid  #62016D;}
+
+tr:hover {background-color:#9702A7;}
+
+.sortirovka {
+    margin:auto;
+    height: 200px;
+    margin-top: 50px;
  }
