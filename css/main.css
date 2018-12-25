@@ -30,6 +30,7 @@ aside {
     background-color: #5a6794;
     grid-row: 2;
     grid-area: a;
+    padding-left: 20px;
 }
 
 main {
@@ -44,6 +45,9 @@ footer {
     grid-area: f;
 }
 
-aside > ul > li {
+aside > ul > li,
+aside > ul > li > a {
+    color: white;
+    list-style-type: none;
     text-decoration: none;
 }
