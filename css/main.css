@@ -4,34 +4,20 @@
     box-sizing: border-box;
 }
 
-/*.grid {*/
-    /*display: grid;*/
-    /*grid-template-areas: "h h"*/
-                         /*"a m"*/
-                         /*"f f";*/
-    /*grid-template-rows: 100px 1fr 100px;*/
-    /*grid-template-columns: 200px 1fr;*/
-    /*min-height: 100vh;*/
-/*}*/
-
 .container {
     display: flex;
-    position:absolute;  /* Почему абсолютная? */
+    position:absolute;
     top:10%; /*высота рабочей панели */
-    left: 0;
     width: 100%;
-    min-height: 90%;        /* Должно быть 100% (ты написала 90, ибо 10: ушло в header. Добавь header в контейнер с флексами) */
-    flex-direction: row;    /* row стандартно идёт, писать не обязательно */
+    min-height: 90%;        /* 10% ушло в header */
     background-color: red;
 }
 
 header {
-  position:absolute;    /* Почему абсолютное? */
-  top:0;
-  left:0;
+  position:absolute;
   width:100%;
   height: 10%;
-  display: inline-flex; /* зачем? */
+  display: flex;
   justify-content:space-between;
   background-color:#62016D;
   padding: 1%;
@@ -40,7 +26,6 @@ header {
 .rows {
     background-color: darkblue;
     display: flex;
-    flex-direction: row;    /* Флексы стандартно  row */
     height: 90%;
 }
 
@@ -53,7 +38,6 @@ header {
     flex-grow: 1;
     display: flex;
     background:#D37BF4;
-    text-align: center; /* Почему используется text-align, а не тот же justify-content, align-items */
 }
 
 .menu a {
